@@ -1,0 +1,42 @@
+{
+  "builders" : [
+    {
+      "type" : "amazon-ebs",
+      "profile" : "default",
+      "region" : "eu-west-2",
+      "instance_type" : "t2.micro",
+      "source_ami_filter": {
+        "filters": {
+          "architecture": "x86_64",
+          "block-device-mapping.volume-type": "gp2",
+          "name": "*amzn2-ami-hvm-2.0.20200917*",
+          "root-device-type": "ebs",
+          "virtualization-type": "hvm"
+        },
+        "most_recent": true,
+        "owners": [
+          "amazon"
+        ]
+      },
+      "ssh_username" : "ec2-user",
+      "ami_name" : "ec2-instance-connect-demo",
+      "ami_description" : "Amazon Linux Image with ec2instance connect",
+      "run_tags" : {
+        "Name" : "packer-builder-ec2",
+        "Tool" : "Packer",
+        "Author" : "nulconaux"
+      }
+    }
+  ],
+  "provisioners": [{
+    "inline": [
+      "echo 'Sleeping for 30 seconds to give Ubuntu enough time to initialize (otherwise, packages may fail to install).'",
+      "sleep 30",
+      "sudo yum update -y",
+      "sudo yum upgrade -y",
+      "sudo yum install -y ec2-instance-connect"
+    ],
+    "type": "shell"
+  }
+  ]
+}

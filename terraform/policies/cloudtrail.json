@@ -1,0 +1,35 @@
+{
+  "eventVersion": "1.05",
+  "userIdentity": {
+    "type": "User",
+    "principalId": "1234567890",
+    "arn": "arn:aws:iam:: 1234567890:$USER",
+    "accountId": "1234567890",
+    "accessKeyId": "ABCDEFGHIJK3RFIONTQQ",
+    "userName": "$ACCOUNT_NAME",
+    "sessionContext": {
+      "attributes": {
+        "mfaAuthenticated": "true",
+        "creationDate": "2019-05-07T18:35:18Z"
+      }
+    }
+  },
+  "eventTime": "2019-06-21T13:58:32Z",
+  "eventSource": "ec2-instance-connect.amazonaws.com",
+  "eventName": "SendSSHPublicKey",
+  "awsRegion": "us-east-1",
+  "sourceIPAddress": "34.204.194.237",
+  "userAgent": "aws-cli/1.15.61 Python/2.7.16 Linux/4.14.77-70.59.amzn1.x86_64 botocore/1.10.60",
+  "requestParameters": {
+    "instanceId": "i-0989ec3292613a4f9",
+    "osUser": "ec2-user",
+    "SSHKey": {
+      "publicKey": "ssh-rsa <removed>\\n"
+    }
+  },
+  "responseElements": null,
+  "requestID": "df1a5fa5-710a-11e9-9a13-cba345085725",
+  "eventID": "070c0ca9-5878-4af9-8eca-6be4158359c4",
+  "eventType": "AwsApiCall",
+  "recipientAccountId": "1234567890"
+}
