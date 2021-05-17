@@ -6,16 +6,15 @@ on:
     - '**.tf'
     - '**.tfvars'
     - '**.tfvars.json'
-
 jobs:
   infracost:
     runs-on: ubuntu-latest
     name: Show infracost diff
-
     steps:
     - name: Check out repository
       uses: actions/checkout@v2
-
+    - name: Export region
+      run: export AWS_DEFAULT_REGION=eu-west-2
     - name: Run infracost diff
       uses: infracost/infracost-gh-action@master
       env:

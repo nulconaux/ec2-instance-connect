@@ -2,7 +2,7 @@ module "foundation" {
   source = "../../"
 
   environment = "demo"
-  region      = "eu-west-2"
+  region      = "${var.region}"
 }
 
 # SSH Key
@@ -84,9 +84,9 @@ resource "aws_instance" "private" {
   associate_public_ip_address = false
 }
 
-resource "aws_instance" "arm" {
+resource "aws_instance" "test" {
   ami                         = data.aws_ami.amazon.id
-  instance_type               = "t4g.micro"
+  instance_type               = "t2.nano"
   key_name                    = local.id
   subnet_id                   = element(module.foundation.private_subnet_ids, 0)
   vpc_security_group_ids      = [module.foundation.default_security_group_id]

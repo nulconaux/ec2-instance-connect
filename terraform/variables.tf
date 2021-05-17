@@ -19,6 +19,7 @@ variable "environment" {
 
 variable "region" {
   description = "The region this module will run in"
+  default = "eu-west-2"
   type        = string
 }
 
