@@ -83,3 +83,12 @@ resource "aws_instance" "private" {
   vpc_security_group_ids      = [module.foundation.default_security_group_id]
   associate_public_ip_address = false
 }
+
+resource "aws_instance" "arm" {
+  ami                         = data.aws_ami.amazon.id
+  instance_type               = "t4g.micro"
+  key_name                    = local.id
+  subnet_id                   = element(module.foundation.private_subnet_ids, 0)
+  vpc_security_group_ids      = [module.foundation.default_security_group_id]
+  associate_public_ip_address = true
+}
