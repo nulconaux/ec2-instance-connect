@@ -1,5 +1,7 @@
 [![IaC](https://app.soluble.cloud/api/v1/public/badges/900d1b3f-d0b7-4d33-baed-6112d472f5ed.svg)](https://app.soluble.cloud/repos/details/github.com/nulconaux/d004-ec2-instance-connect-demo)  [![HIPAA](https://app.soluble.cloud/api/v1/public/badges/4d24c538-5c48-4a36-b65c-45e10668964e.svg)](https://app.soluble.cloud/repos/details/github.com/nulconaux/d004-ec2-instance-connect-demo)
 
+[![IaC](https://app.soluble.cloud/api/v1/public/badges/b2cfa85f-b207-4802-9fa2-13951a5b8de9.svg)](https://app.soluble.cloud/repos/details/github.com/nulconaux/ec2-instance-connect-demo)  [![HIPAA](https://app.soluble.cloud/api/v1/public/badges/f0c03b59-7580-4127-a2e2-d85555d4f89a.svg)](https://app.soluble.cloud/repos/details/github.com/nulconaux/ec2-instance-connect-demo)  
+
 
 # EC 2 Instance Connect
 
